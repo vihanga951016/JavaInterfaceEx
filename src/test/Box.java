@@ -34,10 +34,16 @@ public class Box implements IComputer{
 	public void calculate() {
 		
 		volume = length * height * width;
+		setVolume(volume);
+		
 	}
 	public void display() {
-		
-		System.out.println(volume);
+		System.out.println("");
+		System.out.println("Length :" +getLength());
+		System.out.println("Width: " +getWidth());
+		System.out.println("Height: " +getHeight());
+		System.out.println("");
+		System.out.println("Volume is: " +getVolume());
 		
 	}
 	 

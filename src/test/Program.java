@@ -9,7 +9,7 @@ public class Program {
 		int option = 0;
 		
 		Scanner opp = new Scanner(System.in);
-		System.out.println("Enter the option(1 or 2): ");
+		System.out.print("Enter the option(1 or 2): ");
 		option = opp.nextInt();
 		
 		Person personObject = new Person();
@@ -41,19 +41,23 @@ public class Program {
 			
 		}else if(option == 2) {
 			Scanner len = new Scanner(System.in);
-			System.out.println("Length: ");
+			System.out.print("Length: ");
 			int length = len.nextInt();
 			boxObject.setLength(length);
 			
 			Scanner wid = new Scanner(System.in);
-			System.out.println("Width: ");
+			System.out.print("Width: ");
 			int width = wid.nextInt();
-			boxObject.setLength(width);
+			boxObject.setWidth(width);
 			
 			Scanner hei = new Scanner(System.in);
-			System.out.println("Height: ");
+			System.out.print("Height: ");
 			int height = hei.nextInt();
-			boxObject.setLength(height);
+			boxObject.setHeight(height);
+			
+			boxObject.calculate();
+			boxObject.display();
+			
 		}else {
 			System.out.println("Invalid option");
 		}
